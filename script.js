@@ -15,6 +15,17 @@ function addTask() {
         li.style.textDecoration = "line-through";
     };
 
+    let deleteButton = document.createElement("button");
+
+    deleteButton.innerHTML = " Delete";
+
+    deleteButton.onclick = function(event) {
+        event.stopPropagation();
+        li.remove();
+    };
+
+    li.appendChild(deleteButton);
+
     document.getElementById("taskList").appendChild(li);
 
     document.getElementById("taskInput").value = "";
