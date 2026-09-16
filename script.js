@@ -30,3 +30,11 @@ function addTask() {
 
     document.getElementById("taskInput").value = "";
 }
+
+function updateTaskCount() {
+
+    let tasks = document.querySelectorAll("#taskList li");
+
+    document.getElementById("taskCount").innerHTML =
+        "Tasks: " + tasks.length;
+}
