@@ -11,6 +11,10 @@ function addTask() {
 
     li.innerHTML = task;
 
+    li.onclick = function() {
+        li.style.textDecoration = "line-through";
+    };
+
     document.getElementById("taskList").appendChild(li);
 
     document.getElementById("taskInput").value = "";
